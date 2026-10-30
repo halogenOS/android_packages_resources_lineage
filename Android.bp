@@ -1,0 +1,32 @@
+// SPDX-FileCopyrightText: The halogenOS Project
+// SPDX-License-Identifier: Apache-2.0
+
+phony {
+    name: "lineage_sounds",
+    required: [
+        "lineage_alarm_sounds",
+        "lineage_notification_sounds",
+        "lineage_ringtone_sounds",
+    ],
+}
+
+prebuilt_media {
+    name: "lineage_alarm_sounds",
+    srcs: ["audio/alarms/*"],
+    relative_install_path: "audio/alarms",
+    product_specific: true,
+}
+
+prebuilt_media {
+    name: "lineage_notification_sounds",
+    srcs: ["audio/notifications/*"],
+    relative_install_path: "audio/notifications",
+    product_specific: true,
+}
+
+prebuilt_media {
+    name: "lineage_ringtone_sounds",
+    srcs: ["audio/ringtones/*"],
+    relative_install_path: "audio/ringtones",
+    product_specific: true,
+}
